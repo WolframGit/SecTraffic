@@ -7,6 +7,8 @@ from pystyle import Colors, Colorate
 from colorama import Fore, init
 init()
 
+#ЗАХОДИ НА НАШ КАНАЛ!!! (tg: @DecryptageTeam)
+
 #Задаем переменные для уодобного переключения цвета
 BLUE = Fore.LIGHTBLUE_EX
 RED = Fore.LIGHTRED_EX
