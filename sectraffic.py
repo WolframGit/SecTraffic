@@ -173,5 +173,5 @@ def main():
         s(2)
         os.system('cls')
         main()
-        
-main()
+if __name__ == "__main__":        
+    main()
