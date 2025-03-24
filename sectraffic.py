@@ -1,6 +1,7 @@
 import requests
 import os
 import platform
+import webbrowser
 from time import sleep as s
 from time import time as t
 from pystyle import Colors, Colorate
@@ -156,7 +157,9 @@ def main():
  [1] Downloading 10MB
  [2] Downloading 100MB
  [3] Downloading 1GB
- [4] Downloading 10GB'''
+ [4] Downloading 10GB
+ 
+ [0] Обо мне/нас'''
     print(Colorate.Vertical(Colors.red_to_purple, banner, 2))
     results = input(f'\n{BLUE} [!] Введите опцию -> ')
 
@@ -171,6 +174,18 @@ def main():
 
     elif results == '4':
         d10g()
+
+    elif results == '0':
+        urlMy = 'https://t.me/DatabaseAttack'
+        urlTeam = 'https://t.me/DecryptageTeam'
+        
+        webbrowser.open_new(urlMy)
+        webbrowser.open_new(urlTeam)
+        
+        rev = input(' [!] Нажмите enter, чтобы вернуться в меню...')
+        s(2)
+        os.system('cls' if name == 'Windows' else 'clear')
+        main()
 
     else:
         print(f'{RED} [-] Ошибка! Перезапуск...')
