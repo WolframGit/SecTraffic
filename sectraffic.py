@@ -16,7 +16,6 @@ RESET = Fore.RESET
 
 def d10m():
     url = 'https://speedtest.selectel.ru/10MB'
-    name = platform.system()
     
     #Вычисление времени и запрос
     start = t()
@@ -29,15 +28,17 @@ def d10m():
     
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    if endF == 'y' or 'н':
+    
+    if endF in ('y', 'н'):
         print(' [!] Возвращаем вас обратно...')
         s(2) 
         os.system('cls' if name == 'Windows' else 'clear')
         main()
             
-    elif endF == 'n' or 'т':
+    elif endF in ('n', 'т'):
         print(' [!] Выходим...')
         s(2)
+        exit()
     
     else:
         print(' [!] Неправильная опция! Возвращаем вас обратно...')
@@ -48,7 +49,6 @@ def d10m():
             
 def d100m():
     url = 'https://speedtest.selectel.ru/100MB'
-    name = platform.system()
     
     #Вычисление времени и запрос
     start = t()
@@ -61,16 +61,17 @@ def d100m():
     
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    if endF == 'y' or 'н':
+    
+    if endF in ('y', 'н'):
         print(' [!] Возвращаем вас обратно...')
         s(2) 
-        
         os.system('cls' if name == 'Windows' else 'clear')
         main()
             
-    elif endF == 'n' or 'т':
+    elif endF in ('n', 'т'):
         print(' [!] Выходим...')
         s(2)
+        exit()
     
     else:
         print(' [!] Неправильная опция! Возвращаем вас обратно...')
@@ -78,9 +79,9 @@ def d100m():
         
         os.system('cls' if name == 'Windows' else 'clear')
         main()
+        
 def d1g():
     url = 'https://speedtest.selectel.ru/1GB'
-    name = platform.system()
     
     #Вычисление времени и запрос
     start = t()
@@ -93,15 +94,17 @@ def d1g():
     
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    if endF == 'y' or 'н':
+    
+    if endF in ('y', 'н'):
         print(' [!] Возвращаем вас обратно...')
         s(2) 
         os.system('cls' if name == 'Windows' else 'clear')
         main()
             
-    elif endF == 'n' or 'т':
+    elif endF in ('n', 'т'):
         print(' [!] Выходим...')
         s(2)
+        exit()
     
     else:
         print(' [!] Неправильная опция! Возвращаем вас обратно...')
@@ -112,7 +115,6 @@ def d1g():
 
 def d10g():
     url = 'https://speedtest.selectel.ru/10GB'
-    name = platform.system()
     
     #Вычисление времени и запрос
     start = t()
@@ -125,16 +127,17 @@ def d10g():
     
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    if endF == 'y' or 'н':
+    
+    if endF in ('y', 'н'):
         print(' [!] Возвращаем вас обратно...')
         s(2) 
-        
         os.system('cls' if name == 'Windows' else 'clear')
         main()
             
-    elif endF == 'n' or 'т':
+    elif endF in ('n', 'т'):
         print(' [!] Выходим...')
         s(2)
+        exit()
     
     else:
         print(' [!] Неправильная опция! Возвращаем вас обратно...')
@@ -144,6 +147,7 @@ def d10g():
         main()
 
 def main():
+    
     banner = '''
  _______ _______ _______ _______  ______ _______ _______ _______ _____ _______
  |______ |______ |          |    |_____/ |_____| |______ |______   |   |      
@@ -171,7 +175,11 @@ def main():
     else:
         print(f'{RED} [-] Ошибка! Перезапуск...')
         s(2)
-        os.system('cls')
+        os.system('cls' if name == 'Windows' else 'clear')
         main()
-if __name__ == "__main__":        
+        
+global name
+name = platform.system()
+
+if __name__ == '__main__':
     main()
