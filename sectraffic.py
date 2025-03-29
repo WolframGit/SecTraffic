@@ -1,7 +1,5 @@
-import requests
-import os
-import platform
-import webbrowser
+import requests, webbrowser, platform, os
+from datetime import datetime as dt
 from time import sleep as s
 from time import time as t
 from pystyle import Colors, Colorate
@@ -16,7 +14,9 @@ RED = Fore.LIGHTRED_EX
 RESET = Fore.RESET
 
 def d10m():
+    date_time = dt.now()
     url = 'https://speedtest.selectel.ru/10MB'
+    print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     
     #Вычисление времени и запрос
     start = t()
@@ -26,31 +26,12 @@ def d10m():
     
     #Итог по времени выполнения
     print(f' [~] Время выполнение кода - {fullTime:.0f} sec\n')
-    
-    #Конечный вопрос в функции
-    endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    
-    if endF in ('y', 'н'):
-        print(' [!] Возвращаем вас обратно...')
-        s(2) 
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
-            
-    elif endF in ('n', 'т'):
-        print(' [!] Выходим...')
-        s(2)
-        exit()
-    
-    else:
-        print(' [!] Неправильная опция! Возвращаем вас обратно...')
-        s(2)
-        
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
+    returner()
             
 def d100m():
-    url = 'https://speedtest.selectel.ru/100MB'
-    
+    date_time = dt.now()
+    url = 'https://speedtest.selectel.ru/10MB'
+    print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
     response = requests.get(url)
@@ -59,31 +40,12 @@ def d100m():
     
     #Итог по времени выполнения
     print(f' [~] Время выполнение кода - {fullTime:.0f} sec\n')
-    
-    #Конечный вопрос в функции
-    endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    
-    if endF in ('y', 'н'):
-        print(' [!] Возвращаем вас обратно...')
-        s(2) 
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
-            
-    elif endF in ('n', 'т'):
-        print(' [!] Выходим...')
-        s(2)
-        exit()
-    
-    else:
-        print(' [!] Неправильная опция! Возвращаем вас обратно...')
-        s(2)
-        
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
+    returner()
         
 def d1g():
-    url = 'https://speedtest.selectel.ru/1GB'
-    
+    date_time = dt.now()
+    url = 'https://speedtest.selectel.ru/10MB'
+    print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
     response = requests.get(url)
@@ -95,28 +57,12 @@ def d1g():
     
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
-    
-    if endF in ('y', 'н'):
-        print(' [!] Возвращаем вас обратно...')
-        s(2) 
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
-            
-    elif endF in ('n', 'т'):
-        print(' [!] Выходим...')
-        s(2)
-        exit()
-    
-    else:
-        print(' [!] Неправильная опция! Возвращаем вас обратно...')
-        s(2)
-        
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
+    returner()
 
 def d10g():
-    url = 'https://speedtest.selectel.ru/10GB'
-    
+    date_time = dt.now()
+    url = 'https://speedtest.selectel.ru/10MB'
+    print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
     response = requests.get(url)
@@ -125,7 +71,9 @@ def d10g():
     
     #Итог по времени выполнения
     print(f' [~] Время выполнение кода - {fullTime:.0f} sec\n')
-    
+    returner()
+
+def returner():
     #Конечный вопрос в функции
     endF = input(' [?] Хотите вернуться обратно? (y/n): ')
     
@@ -159,13 +107,13 @@ def main():
  [3] Downloading 1GB
  [4] Downloading 10GB
  
- [0] Обо мне/нас'''
+ [0] Обо мне / О нас'''
     print(Colorate.Vertical(Colors.red_to_purple, banner, 2))
     results = input(f'\n{BLUE} [!] Введите опцию -> ')
 
     if results == '1':
         d10m()
-
+        
     elif results == '2':
         d100m()
     
@@ -173,7 +121,7 @@ def main():
         d1g()
 
     elif results == '4':
-        d10g()
+        d10g()      
 
     elif results == '0':
         urlMy = 'https://t.me/DatabaseAttack'
@@ -182,7 +130,7 @@ def main():
         webbrowser.open_new(urlMy)
         webbrowser.open_new(urlTeam)
         
-        rev = input(' [!] Нажмите enter, чтобы вернуться в меню...')
+        input(' [!] Нажмите enter, чтобы вернуться в меню...')
         s(2)
         os.system('cls' if name == 'Windows' else 'clear')
         main()
