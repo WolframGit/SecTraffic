@@ -30,7 +30,7 @@ def d10m():
             
 def d100m():
     date_time = dt.now()
-    url = 'https://speedtest.selectel.ru/10MB'
+    url = 'https://speedtest.selectel.ru/100MB'
     print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
@@ -44,7 +44,7 @@ def d100m():
         
 def d1g():
     date_time = dt.now()
-    url = 'https://speedtest.selectel.ru/10MB'
+    url = 'https://speedtest.selectel.ru/1GB'
     print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
@@ -61,7 +61,7 @@ def d1g():
 
 def d10g():
     date_time = dt.now()
-    url = 'https://speedtest.selectel.ru/10MB'
+    url = 'https://speedtest.selectel.ru/10GB'
     print(f' [!] Target activated! - ({date_time.hour}:{date_time.minute}:{date_time.second})')
     #Вычисление времени и запрос
     start = t()
