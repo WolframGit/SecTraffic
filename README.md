@@ -1,5 +1,5 @@
 <p align="center", width="100%">
- <img width="15%" src="https://i.postimg.cc/C15n41kC/Vector-1.png">
+ <img width="15%" src="https://i.postimg.cc/RFCpQjS5/Vector-2.png">
 </p>
  
 # SecTraffic🎈
