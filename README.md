@@ -1,5 +1,5 @@
 <p align="center", width="100%">
- <img width="20%" src="https://ibb.co/xqvycVJp">
+ <img width="20%" src="https://postimg.cc/MMkG6zsX">
 </p>
  
 # SecTraffic🎈
