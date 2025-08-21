@@ -62,9 +62,7 @@ def main():
  [1] Downloading 10MB
  [2] Downloading 100MB
  [3] Downloading 1GB
- [4] Downloading 10GB
- 
- [0] Обо мне / О нас'''
+ [4] Downloading 10GB'''
     print(Colorate.Vertical(Colors.red_to_purple, banner, 2))
     option = ['-', '10MB', '100MB', '1GB', '10GB']
     int_option = [1, 2, 3, 4]
@@ -72,25 +70,10 @@ def main():
 
     if results in int_option:
         target(option[results])
-
-    elif results == '0':
-        urlMy = 'https://t.me/DatabaseAttack'
-        
-        webbrowser.open_new(urlMy)
-        
-        input(' [!] Нажмите enter, чтобы вернуться в меню...')
-        s(2)
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
-
-    else:
-        print(f'{RED} [-] Ошибка! Перезапуск...')
-        s(2)
-        os.system('cls' if name == 'Windows' else 'clear')
-        main()
         
 global name
 name = platform.system()
 
 if __name__ == '__main__':
     main()
+
